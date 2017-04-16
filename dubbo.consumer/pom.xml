@@ -8,9 +8,7 @@
 		<artifactId>dubbo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.loner</groupId>
 	<artifactId>dubbo.consumer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>dubbo.consumer Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -18,7 +16,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 

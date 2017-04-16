@@ -18,6 +18,7 @@ public class ConsumerTest {
 		CnUser cnUser = helloService.findCnUserById("HYT48393");
 		System.out.println("helloService.findCnUserById==" + cnUser.toString());
 		context.close();
+		System.exit(0);
 	}
 
 }

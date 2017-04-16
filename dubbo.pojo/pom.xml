@@ -8,9 +8,7 @@
 		<artifactId>dubbo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.loner</groupId>
 	<artifactId>dubbo.pojo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>dubbo.pojo</name>
 	<url>http://maven.apache.org</url>
 	<properties>

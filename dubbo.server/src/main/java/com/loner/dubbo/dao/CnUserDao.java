@@ -7,6 +7,8 @@
  */
 package com.loner.dubbo.dao;
 
+import org.springframework.stereotype.Component;
+
 import com.loner.dubbo.pojo.CnUser;
 
 /**
@@ -18,6 +20,7 @@ import com.loner.dubbo.pojo.CnUser;
  *  @version V1.0
  *  @author pengcheng.tian
  */
+@Component
 public class CnUserDao {
 
 	

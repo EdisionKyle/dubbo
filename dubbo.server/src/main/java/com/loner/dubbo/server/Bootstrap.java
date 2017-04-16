@@ -1,50 +1,20 @@
 package com.loner.dubbo.server;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class Bootstrap {
 
-import com.google.common.util.concurrent.AbstractIdleService;
-
-public class Bootstrap extends AbstractIdleService {
-
-	private ClassPathXmlApplicationContext context;
-
-	public static void main(String[] args) {
-
-		Bootstrap bootstrap = new Bootstrap();
-		bootstrap.startAsync();
-		try {
-			Object lock = new Object();
-			synchronized (lock) {
-				while (true) {
-					lock.wait();
-				}
-			}
-		} catch (InterruptedException ex) {
-			System.err.println("ignoreinterruption");
-		}
-
+	static {
+		// 设置dubbo使用slf4j来记录日志
+		System.setProperty("dubbo.application.logger", "slf4j");
 	}
 
 	/**
-	 * Start the service.
+	 * 主函数
+	 *
+	 * @param args
+	 *            启动参数
 	 */
-	@Override
-	protected void startUp() throws Exception {
-		context = new ClassPathXmlApplicationContext("dubbo-demo-provider.xml");
-		context.start();
-		context.registerShutdownHook();
-		System.out
-				.println("----------------provider service startedsuccessfully------------");
-	}
-
-	/**
-	 * Stop the service.
-	 */
-	@Override
-	protected void shutDown() throws Exception {
-		context.stop();
-		System.out
-				.println("-------------service stoppedsuccessfully-------------");
+	public static void main(String[] args) throws Exception {
+		com.alibaba.dubbo.container.Main.main(args);
 	}
 
 }
